@@ -179,41 +179,44 @@
             <span class="cart-total-price">$<?=$total?></span>
         </div>
     </section>
-    <form action="checkout.php" method="post" class=""> 
+   
         <section class="checkout_box">
         <div class="customer_detail">
             <h2 class="titlebascket">Customer details</h2>
             <div class="shipping_checkout">
-                <div class="f_l_name">
-                        <div class="fname">
-                            <label class="first_name"><em>*</em>First name</label>
-                            <input type="text" title="First name"name="First name" required placehoder="First name" class="box">
-                                        </div>
-                        <div class="lname">
-                            <label class="last_name"><em>*</em>Last name</label>
-                            <input type="text" title="Last name"name=" Last name" required placehoder="Last name" class="box">
-                        </div>
-                </div>
-                <div class="compname">
-                    <label class="company_mane">Company name (Optional)</label>
-                    <input type="text"title="Company name" name="Company name" required placehoder=" Company name" class="box1">
-                </div>
-                <div class="contact">
-                    <label class="custom_contact"><em>*</em>Contact</label>
-                    <input type="text"  title="contact"name="contact" required placehoder="contact" class="box1">
-                </div>
-                <div class="email">
-                    <label class="email_address"><em>*</em>Email address</label>    
-                    <input type="email" title="Email adress"autocapitalize="off" autocorrect="off" spellcheck="false" name="email" class="input-text required-entry validate-email" />
-                </div>
-                <div class="address">
-                    <label for="billing:street1" class="required"><em>*</em>Address</label> 
-                    <textarea type="text" title="Full Address" name="billing[street][]" id="billing:street1" value="" class="input-text required-entry"></textarea>
-                </div>
-                <div class="information">
-                    <label for="billing:street1" class="required">Additional information</label>  
-                    <textarea type="text" title="information" name="billing[street][]" id="billing:street1" value="" class="input-text required-entry"></textarea>
-                </div>
+                <form action="fonctions/authcode.php" method="POST" class=""> 
+                    <div class="f_l_name">
+                            <div class="fname">
+                                <label class="first_name"><em>*</em>First name</label>
+                                <input type="text" title="First name"name="name" required placehoder="First name" class="box">
+                                            </div>
+                            <div class="lname">
+                                <label class="last_name"><em>*</em>Last name</label>
+                                <input type="text" title="Last name"name=" Last name" required placehoder="Last name" class="box">
+                            </div>
+                    </div>
+                    <div class="compname">
+                        <label class="company_mane">Company name (Optional)</label>
+                        <input type="text"title="Company name" name="Company name" required placehoder=" Company name" class="box1">
+                    </div>
+                    <div class="contact">
+                        <label class="custom_contact"><em>*</em>Contact</label>
+                        <input type="text"  title="contact"name="Contact" required placehoder="contact" class="box1">
+                    </div>
+                    <div class="email">
+                        <label class="email_address"><em>*</em>Email address</label>    
+                        <input type="email" title="Email adress"autocapitalize="off" autocorrect="off" spellcheck="false" name="Email" class="input-text required-entry validate-email" />
+                    </div>
+                    <div class="address">
+                        <label for="billing:street1" class="required"><em>*</em>Address</label> 
+                        <textarea type="text" title="Full Address" name=" Full_adress" id="billing:street1" value="" class="input-text required-entry"></textarea>
+                    </div>
+                    <div class="information">
+                        <label for="billing:street1" class="required">Additional information</label>  
+                        <textarea type="text" title="information" name="Additional" id="billing:street1" value="" class="input-text required-entry"></textarea>
+                    </div>
+                    <button type="submit" name="register_btn"class="button" > Submit</button>
+                </form>
             </div>
        
       
@@ -362,9 +365,10 @@
    
 
     </section>
+   
                       
 
-                        </form>
+   
    
     
     <h3 class="total_estimation" value="20"> Estimated TOTAL VALUE: $ 20</h3>
